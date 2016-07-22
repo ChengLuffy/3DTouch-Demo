@@ -14,6 +14,8 @@
 		2A86EF2D1D4257F5008C5B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A86EF2B1D4257F5008C5B6B /* LaunchScreen.storyboard */; };
 		2A86EF381D4257F5008C5B6B /* _DTouchTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86EF371D4257F5008C5B6B /* _DTouchTestTests.swift */; };
 		2A86EF431D4257F5008C5B6B /* _DTouchTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86EF421D4257F5008C5B6B /* _DTouchTestUITests.swift */; };
+		2A86EF531D426B94008C5B6B /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86EF521D426B94008C5B6B /* PreviewViewController.swift */; };
+		2A86EF551D426DE6008C5B6B /* CommitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86EF541D426DE6008C5B6B /* CommitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2A86EF3E1D4257F5008C5B6B /* 3DTouchTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTouchTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A86EF421D4257F5008C5B6B /* _DTouchTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DTouchTestUITests.swift; sourceTree = "<group>"; };
 		2A86EF441D4257F5008C5B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A86EF521D426B94008C5B6B /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		2A86EF541D426DE6008C5B6B /* CommitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				2A86EF221D4257F5008C5B6B /* AppDelegate.swift */,
 				2A86EF241D4257F5008C5B6B /* ViewController.swift */,
+				2A86EF521D426B94008C5B6B /* PreviewViewController.swift */,
+				2A86EF541D426DE6008C5B6B /* CommitViewController.swift */,
 				2A86EF261D4257F5008C5B6B /* Main.storyboard */,
 				2A86EF291D4257F5008C5B6B /* Assets.xcassets */,
 				2A86EF2B1D4257F5008C5B6B /* LaunchScreen.storyboard */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A86EF251D4257F5008C5B6B /* ViewController.swift in Sources */,
+				2A86EF551D426DE6008C5B6B /* CommitViewController.swift in Sources */,
 				2A86EF231D4257F5008C5B6B /* AppDelegate.swift in Sources */,
+				2A86EF531D426B94008C5B6B /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

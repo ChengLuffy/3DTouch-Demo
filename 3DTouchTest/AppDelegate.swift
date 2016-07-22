@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if (launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] != nil) {
+            let shortcutItem = launchOptions![UIApplicationLaunchOptionsShortcutItemKey] as! UIApplicationShortcutItem
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nav = storyboard.instantiateViewControllerWithIdentifier("nav") as! UINavigationController
+            switch shortcutItem.type {
+            case "0":
+                let previewVC = storyboard.instantiateViewControllerWithIdentifier("preview")
+                nav.pushViewController(previewVC, animated: true)
+                break
+            case "1":
+                let commitVC = storyboard.instantiateViewControllerWithIdentifier("commit")
+                nav.pushViewController(commitVC, animated: false)
+                break
+            default:
+                break
+            }
+        }
+        
         return true
     }
 
@@ -39,6 +58,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        print(shortcutItem.type)
+        let nav = storyboard.instantiateViewControllerWithIdentifier("nav") as! UINavigationController
+        switch shortcutItem.type {
+        case "0":
+            let previewVC = storyboard.instantiateViewControllerWithIdentifier("preview")
+            self.window?.rootViewController? = nav
+            nav.pushViewController(previewVC, animated: false)
+            completionHandler(true)
+            break
+        case "1":
+            let commitVC = storyboard.instantiateViewControllerWithIdentifier("commit")
+            self.window?.rootViewController? = nav
+            nav.pushViewController(commitVC, animated: false)
+            completionHandler(true)
+            break
+        default:
+            break
+        }
     }
 
 
